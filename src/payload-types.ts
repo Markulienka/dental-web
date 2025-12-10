@@ -157,7 +157,76 @@ export interface UserAuthOperations {
 export interface Page {
   id: string;
   title: string;
-  layout: (CallToActionBlock | ContentBlock | MediaBlock | ArchiveBlock | FormBlock)[];
+  layout: (
+    | CallToActionBlock
+    | ContentBlock
+    | MediaBlock
+    | ArchiveBlock
+    | FormBlock
+    | {
+        title: string;
+        description: string;
+        links?:
+          | {
+              link: {
+                type?: ('reference' | 'custom') | null;
+                newTab?: boolean | null;
+                reference?:
+                  | ({
+                      relationTo: 'pages';
+                      value: string | Page;
+                    } | null)
+                  | ({
+                      relationTo: 'posts';
+                      value: string | Post;
+                    } | null);
+                url?: string | null;
+                label: string;
+                /**
+                 * Choose how the link should be rendered.
+                 */
+                appearance?: ('default' | 'outline') | null;
+              };
+              id?: string | null;
+            }[]
+          | null;
+        video: string | Media;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'landingPageBlock';
+      }
+    | {
+        title: string;
+        features?:
+          | {
+              heading: string;
+              description: string;
+              icon: string | Media;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'feature43Block';
+      }
+    | {
+        title: string;
+        features?:
+          | {
+              heading: string;
+              description: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'feature43AlternativeBlock';
+      }
+    | Feature16Block
+    | Pricing34Block
+    | Pricing30Block
+    | TextDescriptionBlock
+  )[];
   meta?: {
     title?: string | null;
     /**
@@ -738,6 +807,124 @@ export interface Form {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Feature16Block".
+ */
+export interface Feature16Block {
+  title?: string | null;
+  features?:
+    | {
+        doctorName: string;
+        clinicName: string;
+        description: string;
+        items: {
+          icon: string | Media;
+        };
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'feature16Block';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Pricing34Block".
+ */
+export interface Pricing34Block {
+  title?: string | null;
+  description?: string | null;
+  backgroundMuted?: boolean | null;
+  centerAlign?: boolean | null;
+  card?:
+    | {
+        name: string;
+        price: string;
+        description?: string | null;
+        features?:
+          | {
+              text: string;
+              bold?: boolean | null;
+              id?: string | null;
+            }[]
+          | null;
+        linkCard: {
+          type?: ('reference' | 'custom') | null;
+          newTab?: boolean | null;
+          reference?:
+            | ({
+                relationTo: 'pages';
+                value: string | Page;
+              } | null)
+            | ({
+                relationTo: 'posts';
+                value: string | Post;
+              } | null);
+          url?: string | null;
+          label: string;
+          /**
+           * Choose how the link should be rendered.
+           */
+          appearance?: ('default' | 'outline') | null;
+        };
+        highlighted?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'pricing34Block';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Pricing30Block".
+ */
+export interface Pricing30Block {
+  title: string;
+  featuresLabel: string;
+  /**
+   * Define all features once. Each plan will set values for these features.
+   */
+  features?:
+    | {
+        name: string;
+        id?: string | null;
+      }[]
+    | null;
+  plans?:
+    | {
+        name: string;
+        isHighlighted?: boolean | null;
+        /**
+         * Set values for each feature defined above. Must match the number of features.
+         */
+        featureValues?:
+          | {
+              valueType: 'text' | 'boolean';
+              textValue?: string | null;
+              booleanValue?: boolean | null;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'pricing30Block';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TextDescriptionBlock".
+ */
+export interface TextDescriptionBlock {
+  title: string;
+  description: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'textDescriptionBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects".
  */
 export interface Redirect {
@@ -1022,6 +1209,63 @@ export interface PagesSelect<T extends boolean = true> {
         mediaBlock?: T | MediaBlockSelect<T>;
         archive?: T | ArchiveBlockSelect<T>;
         formBlock?: T | FormBlockSelect<T>;
+        landingPageBlock?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              links?:
+                | T
+                | {
+                    link?:
+                      | T
+                      | {
+                          type?: T;
+                          newTab?: T;
+                          reference?: T;
+                          url?: T;
+                          label?: T;
+                          appearance?: T;
+                        };
+                    id?: T;
+                  };
+              video?: T;
+              id?: T;
+              blockName?: T;
+            };
+        feature43Block?:
+          | T
+          | {
+              title?: T;
+              features?:
+                | T
+                | {
+                    heading?: T;
+                    description?: T;
+                    icon?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        feature43AlternativeBlock?:
+          | T
+          | {
+              title?: T;
+              features?:
+                | T
+                | {
+                    heading?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        feature16Block?: T | Feature16BlockSelect<T>;
+        pricing34Block?: T | Pricing34BlockSelect<T>;
+        pricing30Block?: T | Pricing30BlockSelect<T>;
+        textDescriptionBlock?: T | TextDescriptionBlockSelect<T>;
       };
   meta?:
     | T
@@ -1118,6 +1362,107 @@ export interface FormBlockSelect<T extends boolean = true> {
   form?: T;
   enableIntro?: T;
   introContent?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Feature16Block_select".
+ */
+export interface Feature16BlockSelect<T extends boolean = true> {
+  title?: T;
+  features?:
+    | T
+    | {
+        doctorName?: T;
+        clinicName?: T;
+        description?: T;
+        items?:
+          | T
+          | {
+              icon?: T;
+            };
+        id?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Pricing34Block_select".
+ */
+export interface Pricing34BlockSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  backgroundMuted?: T;
+  centerAlign?: T;
+  card?:
+    | T
+    | {
+        name?: T;
+        price?: T;
+        description?: T;
+        features?:
+          | T
+          | {
+              text?: T;
+              bold?: T;
+              id?: T;
+            };
+        linkCard?:
+          | T
+          | {
+              type?: T;
+              newTab?: T;
+              reference?: T;
+              url?: T;
+              label?: T;
+              appearance?: T;
+            };
+        highlighted?: T;
+        id?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Pricing30Block_select".
+ */
+export interface Pricing30BlockSelect<T extends boolean = true> {
+  title?: T;
+  featuresLabel?: T;
+  features?:
+    | T
+    | {
+        name?: T;
+        id?: T;
+      };
+  plans?:
+    | T
+    | {
+        name?: T;
+        isHighlighted?: T;
+        featureValues?:
+          | T
+          | {
+              valueType?: T;
+              textValue?: T;
+              booleanValue?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TextDescriptionBlock_select".
+ */
+export interface TextDescriptionBlockSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
   id?: T;
   blockName?: T;
 }

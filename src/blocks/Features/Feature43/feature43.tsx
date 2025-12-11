@@ -4,9 +4,7 @@ import { Media as MediaType } from '@/payload-types'
 type Feature = {
   heading: string
   description: string
-  items: {
-    icon: MediaType | string
-  }
+  icon: MediaType | string
 }
 
 export type Feature43Props = {
@@ -27,11 +25,11 @@ const Feature43: React.FC<Feature43Props> = ({ title, features = [] }) => {
           {features.map((feature, i) => (
             <div key={i} className="flex flex-col items-center text-center">
               <div className="bg-accent mb-5 flex size-16 items-center justify-center rounded-full overflow-hidden">
-                {feature.items?.icon && typeof feature.items.icon === 'object' && (
+                {feature.icon && typeof feature.icon === 'object' && (
                   <Media
-                    resource={feature.items.icon}
-                    className="size-full"
-                    imgClassName="size-full object-cover"
+                    resource={feature.icon}
+                    className="w-8 h-8"
+                    imgClassName="size-full object-contain"
                   />
                 )}
               </div>

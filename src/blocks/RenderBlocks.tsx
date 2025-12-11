@@ -14,6 +14,10 @@ import { Feature16Block } from './Features/Feature16/Component'
 import { Pricing34Block } from './Pricings/Pricing34/Component'
 import { Pricing30Block } from './Pricings/Pricing30/Component'
 import { TextDescriptionBlock } from './TextDescription/Component'
+import { Faq9Block } from './Faq/Component'
+import { CTAFooterBlock } from './CTAFooter/Component'
+import { Contact5Block } from './Contact/Component'
+import { Feature20Block } from './Features/Feature20/Component'
 
 const blockComponents = {
   archive: ArchiveBlock,
@@ -28,6 +32,10 @@ const blockComponents = {
   pricing34Block: Pricing34Block,
   pricing30Block: Pricing30Block,
   textDescriptionBlock: TextDescriptionBlock,
+  faq9Block: Faq9Block,
+  ctaFooterBlock: CTAFooterBlock,
+  contact5Block: Contact5Block,
+  feature20Block: Feature20Block,
 }
 
 export const RenderBlocks: React.FC<{

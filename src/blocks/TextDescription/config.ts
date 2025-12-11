@@ -9,6 +9,12 @@ export const TextDescriptionBlock: Block = {
   },
   fields: [
     {
+      name: 'centeredAlign',
+      type: 'checkbox',
+      label: 'Centered Align',
+      defaultValue: true,
+    },
+    {
       name: 'title',
       type: 'text',
       label: 'Title',

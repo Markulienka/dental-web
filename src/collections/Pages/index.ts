@@ -14,6 +14,11 @@ import { Feature16Block } from '@/blocks/Features/Feature16/config'
 import { Pricing34Block } from '@/blocks/Pricings/Pricing34/config'
 import { Pricing30Block } from '@/blocks/Pricings/Pricing30/config'
 import { TextDescriptionBlock } from '@/blocks/TextDescription/config'
+import { Faq9Block } from '@/blocks/Faq/config'
+import { CTAFooterBlock } from '@/blocks/CTAFooter/config'
+import { Contact5Block } from '@/blocks/Contact/config'
+import { Feature20Block } from '@/blocks/Features/Feature20/config'
+
 import { slugField } from 'payload'
 import { populatePublishedAt } from '../../hooks/populatePublishedAt'
 import { generatePreviewPath } from '../../utilities/generatePreviewPath'
@@ -91,6 +96,10 @@ export const Pages: CollectionConfig<'pages'> = {
                 Pricing34Block,
                 Pricing30Block,
                 TextDescriptionBlock,
+                Faq9Block,
+                CTAFooterBlock,
+                Contact5Block,
+                Feature20Block,
               ],
               required: true,
               admin: {

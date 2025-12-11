@@ -226,6 +226,14 @@ export interface Page {
     | Pricing34Block
     | Pricing30Block
     | TextDescriptionBlock
+    | Faq9Block
+    | CTAFooterBlock
+    | {
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'contact5Block';
+      }
+    | Feature20Block
   )[];
   meta?: {
     title?: string | null;
@@ -917,11 +925,100 @@ export interface Pricing30Block {
  * via the `definition` "TextDescriptionBlock".
  */
 export interface TextDescriptionBlock {
+  centeredAlign?: boolean | null;
   title: string;
   description: string;
   id?: string | null;
   blockName?: string | null;
   blockType: 'textDescriptionBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Faq9Block".
+ */
+export interface Faq9Block {
+  title?: string | null;
+  faqs: {
+    question: string;
+    answer: string;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'faq9Block';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CTAFooterBlock".
+ */
+export interface CTAFooterBlock {
+  background?: ('muted' | 'black') | null;
+  title?: string | null;
+  link: {
+    type?: ('reference' | 'custom') | null;
+    newTab?: boolean | null;
+    reference?:
+      | ({
+          relationTo: 'pages';
+          value: string | Page;
+        } | null)
+      | ({
+          relationTo: 'posts';
+          value: string | Post;
+        } | null);
+    url?: string | null;
+    label: string;
+    /**
+     * Choose how the link should be rendered.
+     */
+    appearance?: ('default' | 'outline') | null;
+  };
+  description?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'ctaFooterBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Feature20Block".
+ */
+export interface Feature20Block {
+  clinics?:
+    | {
+        image: string | Media;
+        clinicName: string;
+        location: string;
+        tags?:
+          | {
+              tag: string;
+              id?: string | null;
+            }[]
+          | null;
+        link: {
+          type?: ('reference' | 'custom') | null;
+          newTab?: boolean | null;
+          reference?:
+            | ({
+                relationTo: 'pages';
+                value: string | Page;
+              } | null)
+            | ({
+                relationTo: 'posts';
+                value: string | Post;
+              } | null);
+          url?: string | null;
+          label: string;
+          /**
+           * Choose how the link should be rendered.
+           */
+          appearance?: ('default' | 'outline') | null;
+        };
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'feature20Block';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1266,6 +1363,15 @@ export interface PagesSelect<T extends boolean = true> {
         pricing34Block?: T | Pricing34BlockSelect<T>;
         pricing30Block?: T | Pricing30BlockSelect<T>;
         textDescriptionBlock?: T | TextDescriptionBlockSelect<T>;
+        faq9Block?: T | Faq9BlockSelect<T>;
+        ctaFooterBlock?: T | CTAFooterBlockSelect<T>;
+        contact5Block?:
+          | T
+          | {
+              id?: T;
+              blockName?: T;
+            };
+        feature20Block?: T | Feature20BlockSelect<T>;
       };
   meta?:
     | T
@@ -1461,8 +1567,78 @@ export interface Pricing30BlockSelect<T extends boolean = true> {
  * via the `definition` "TextDescriptionBlock_select".
  */
 export interface TextDescriptionBlockSelect<T extends boolean = true> {
+  centeredAlign?: T;
   title?: T;
   description?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Faq9Block_select".
+ */
+export interface Faq9BlockSelect<T extends boolean = true> {
+  title?: T;
+  faqs?:
+    | T
+    | {
+        question?: T;
+        answer?: T;
+        id?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CTAFooterBlock_select".
+ */
+export interface CTAFooterBlockSelect<T extends boolean = true> {
+  background?: T;
+  title?: T;
+  link?:
+    | T
+    | {
+        type?: T;
+        newTab?: T;
+        reference?: T;
+        url?: T;
+        label?: T;
+        appearance?: T;
+      };
+  description?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Feature20Block_select".
+ */
+export interface Feature20BlockSelect<T extends boolean = true> {
+  clinics?:
+    | T
+    | {
+        image?: T;
+        clinicName?: T;
+        location?: T;
+        tags?:
+          | T
+          | {
+              tag?: T;
+              id?: T;
+            };
+        link?:
+          | T
+          | {
+              type?: T;
+              newTab?: T;
+              reference?: T;
+              url?: T;
+              label?: T;
+              appearance?: T;
+            };
+        id?: T;
+      };
   id?: T;
   blockName?: T;
 }

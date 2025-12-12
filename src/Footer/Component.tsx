@@ -103,7 +103,7 @@ export async function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-whiteColor/10 pt-8 text-center text-sm text-white/70">
+        <div className="mt-12 border-t border-primary-foreground/10 pt-8 text-center text-sm text-white/70">
           <p>© {new Date().getFullYear()} Dental Web. Všetky práva vyhradené.</p>
         </div>
       </div>

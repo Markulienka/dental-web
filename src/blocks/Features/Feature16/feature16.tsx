@@ -19,10 +19,10 @@ const Feature16: React.FC<Feature16Props> = ({ title, features = [] }) => {
   return (
     <section className="py-32">
       <div className="container">
-        <h2 className="text-3xl text-blackColor lg:text-4xl text-center">{title}</h2>
+        <h2 className="text-3xl text-primary lg:text-4xl text-center">{title}</h2>
         <div className="mt-14 grid gap-6 lg:mt-20 lg:grid-cols-3">
           {features.map((feature, i) => (
-            <div key={i} className="bg-whiteColor border border-border rounded-lg p-5">
+            <div key={i} className="bg-primary-foreground border border-border rounded-lg p-5">
               <div className="flex gap-4">
                 <span className="bg-muted flex size-12 shrink-0 items-center justify-center rounded-full overflow-hidden">
                   {feature.items?.icon && typeof feature.items.icon === 'object' && (
@@ -34,11 +34,11 @@ const Feature16: React.FC<Feature16Props> = ({ title, features = [] }) => {
                   )}
                 </span>
                 <div className="flex-1">
-                  <h3 className="mb-1 text-blackColor">{feature.doctorName}</h3>
-                  <p className="mb-3 text-sm text-text">{feature.clinicName}</p>
+                  <h3 className="mb-1 text-primary">{feature.doctorName}</h3>
+                  <p className="mb-3 text-sm text-foreground">{feature.clinicName}</p>
                 </div>
               </div>
-              <p className="mt-4 text-text leading-7">{feature.description}</p>
+              <p className="mt-4 text-foreground leading-7">{feature.description}</p>
             </div>
           ))}
         </div>

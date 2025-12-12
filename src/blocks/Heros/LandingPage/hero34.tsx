@@ -59,10 +59,10 @@ const Hero34: React.FC<LandingPageProps> = ({ title, description, links, video }
       <div className="container mx-auto px-4">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-blackColor lg:text-5xl xl:text-6xl">
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-primary lg:text-5xl xl:text-6xl">
               {title}
             </h1>
-            <p className="text-text mb-8 max-w-xl text-lg lg:text-xl">{description}</p>
+            <p className="text-foreground mb-8 max-w-xl text-lg lg:text-xl">{description}</p>
             <div className="flex w-full flex-col justify-center gap-3 sm:flex-row lg:justify-start">
               {primaryLink ? (
                 <CMSLink
@@ -102,10 +102,10 @@ const Hero34: React.FC<LandingPageProps> = ({ title, description, links, video }
             />
             {!isPlaying && (
               <div
-                className="absolute inset-0 flex items-center justify-center bg-blackColor/40 transition-all duration-300 hover:bg-blackColor/30 cursor-pointer"
+                className="absolute inset-0 flex items-center justify-center bg-primary/40 transition-all duration-300 hover:bg-primary/30 cursor-pointer"
                 onClick={handleVideoClick}
               >
-                <span className="flex items-center gap-2 rounded-full bg-whiteColor/95 px-6 py-3 text-base font-semibold text-blackColor shadow-lg transition-all duration-200 hover:scale-110 hover:shadow-xl">
+                <span className="flex items-center gap-2 rounded-full bg-primary-foreground/95 px-6 py-3 text-base font-semibold text-primary shadow-lg transition-all duration-200 hover:scale-110 hover:shadow-xl">
                   <Play className="h-5 w-5" />
                   {videoLabel && <span>{videoLabel}</span>}
                 </span>

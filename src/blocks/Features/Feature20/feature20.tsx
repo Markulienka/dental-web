@@ -41,10 +41,10 @@ const ClinicCard: React.FC<ClinicItem> = ({ image, clinicName, location, tags, l
 
     {/* Content section below */}
     <div className="bg-white p-6">
-      <p className="mb-2 text-xl text-grayColor-900">{clinicName}</p>
+      <p className="mb-2 text-xl text-foreground/100">{clinicName}</p>
 
-      <div className="mb-4 flex items-center gap-2 text-grayColor">
-        <MapPin className="h-4 w-4 flex-shrink-0 text-grayColor" />
+      <div className="mb-4 flex items-center gap-2 text-foreground">
+        <MapPin className="h-4 w-4 flex-shrink-0 text-foreground" />
         <span>{location}</span>
       </div>
 
@@ -52,7 +52,7 @@ const ClinicCard: React.FC<ClinicItem> = ({ image, clinicName, location, tags, l
         {tags?.map((t, i) => (
           <span
             key={i}
-            className="rounded-full bg-gray-200 px-3 py-1 text-xs text-gray-800"
+            className="rounded-full bg-foreground/10 px-3 py-1 text-xs text-foreground/100"
           >
             {t.tag}
           </span>

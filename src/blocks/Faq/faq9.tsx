@@ -26,7 +26,7 @@ const Faq9: React.FC<Faq9Props> = ({ title, faqs = [] }) => {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="bg-whiteColor mb-2 rounded-md border px-5 py-2 md:mb-4 last:border-b"
+              className="bg-primary-foreground mb-2 rounded-md border px-5 py-2 md:mb-4 last:border-b"
             >
               <AccordionTrigger className="text-left">
                 <span className="flex-1 text-left">{faq.question}</span>

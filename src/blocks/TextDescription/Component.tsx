@@ -14,10 +14,10 @@ export const TextDescriptionBlock: React.FC<TextDescriptionProps> = ({
   return (
     <section className="w-full bg-muted py-32 md:py-20 lg:py-32">
       <div className={cn('container max-w-4xl', centeredAlign && 'text-center')}>
-        <h2 className="mb-6 text-4xl font-medium leading-tight text-blackColor lg:text-5xl">
+        <h2 className="mb-6 text-4xl font-medium leading-tight text-primary lg:text-5xl">
           {title}
         </h2>
-        <p className="text-lg leading-8 text-text">{description}</p>
+        <p className="text-lg leading-8 text-foreground">{description}</p>
       </div>
     </section>
   )

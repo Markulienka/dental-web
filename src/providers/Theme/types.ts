@@ -1,10 +1,16 @@
-export type Theme = 'dark' | 'light'
+export type ThemeName = 'default' | 'kodama-grove' | 'sunset-horizon' | 'bubblegum' | 'sage-garden'
 
-export interface ThemeContextType {
-  setTheme: (theme: Theme | null) => void
-  theme?: Theme | null
+export interface Theme {
+  name: ThemeName
 }
 
-export function themeIsValid(string: null | string): string is Theme {
-  return string ? ['dark', 'light'].includes(string) : false
+export const themeLocalStorageKey = 'payload-theme'
+
+export const defaultTheme: Theme = {
+  name: 'default',
+}
+
+export interface ThemeContextType {
+  setTheme: (name: ThemeName) => void
+  theme: ThemeName
 }

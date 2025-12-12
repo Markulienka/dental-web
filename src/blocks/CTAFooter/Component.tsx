@@ -30,7 +30,7 @@ export const CTAFooterBlock: React.FC<CTAFooterProps> = ({
   const isBlack = background === 'black'
   return (
     <section
-      className={cn('py-24', isBlack ? 'bg-blackColor text-whiteColor' : 'bg-muted text-text')}
+      className={cn('py-24', isBlack ? 'bg-primary text-primary-foreground' : 'bg-muted text-foreground')}
     >
       <div className="container flex flex-col items-center gap-6 text-center">
         {title && <h2 className="max-w-3xl text-xl font-semibold md:text-2sxl">{title}</h2>}
@@ -40,8 +40,8 @@ export const CTAFooterBlock: React.FC<CTAFooterProps> = ({
             className={cn(
               'px-6 py-3 text-sm font-medium',
               isBlack
-                ? 'bg-whiteColor text-blackColor hover:bg-whiteColor/90'
-                : 'bg-blackColor text-whiteColor hover:bg-blackColor/90',
+                ? 'bg-primary-foreground text-primary hover:bg-primary-foreground/90'
+                : 'bg-primary text-primary-foreground hover:bg-primary/90',
             )}
             {...link}
           />
@@ -49,7 +49,7 @@ export const CTAFooterBlock: React.FC<CTAFooterProps> = ({
             <p
               className={cn(
                 'max-w-xl text-sm md:text-base',
-                isBlack ? 'text-whiteColor/80' : 'text-grayColor',
+                isBlack ? 'text-primary-foreground/80' : 'text-primary/80',
               )}
             >
               {description}

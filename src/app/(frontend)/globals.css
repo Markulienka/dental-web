@@ -14,45 +14,246 @@
   }
 
   :root {
-    --background: 1.0000 0 0;
-    --foreground: 0.2012 0.0453 278.3434;
+      --background: 1.0000 0 0;           
+      --foreground: 0.2012 0.0453 278.3434; 
 
-    --card: 0.9608 0.0024 264.5313;
-    --card-foreground: 0.2012 0.0453 278.3434;
+      --card: 0.9608 0.0024 264.5313;
+      --card-foreground: 0.2012 0.0453 278.3434;
+
+      --popover: 1.0000 0 0;
+      --popover-foreground: 0.2012 0.0453 278.3434;
+
+      --primary: 0 0 0;                    
+      --primary-foreground: 0.9843 0.0039 264.5419; 
+
+      --secondary: 0.9608 0.0192 264.5313; 
+      --secondary-foreground: 0.2695 0.0515 278.0403; 
+
+      --muted: 0.986 0 0;
+      --muted-foreground: 1 0 0;
+
+      --accent: 0.96 0 0;
+      --accent-foreground: 0 0 0;
+
+      --destructive: 0.6279 0.2577 29.2339;
+      --destructive-foreground: 0.9843 0.0039 264.5419;
+
+      --border: 0.8549 0.0136 258.3382;
+      --input: 0.9176 0.0167 258.8462;
+      --ring: 0.2012 0.0453 278.3434;
+
+      --radius: 0.2rem;
+
+      --success: 0.7686 0.1686 208.1613;   
+      --warning: 0.9138 0.1285 86.0588;   
+      --error: 0.8824 0.1961 27.3251;     
+
+      --footer-bg: 0.18 0 0;                        
+  }
+
+  [data-theme="kodama-grove"] {
+    --background: 0.8798 0.0534 91.7893;
+    --foreground: 0.4265 0.0310 59.2153;
+
+    --card: 0.8937 0.0395 87.5676;
+    --card-foreground: 0.4265 0.0310 59.2153;
+
+    --popover: 0.9378 0.0331 89.8515;
+    --popover-foreground: 0.4265 0.0310 59.2153;
+
+    --primary: 0.6657 0.1050 118.9078;
+    --primary-foreground: 0.9882 0.0069 88.6415;
+
+    --secondary: 0.8532 0.0631 91.1493;
+    --secondary-foreground: 0.4265 0.0310 59.2153;
+
+    --muted: 0.8532 0.0631 91.1493;
+    --muted-foreground: 0.5761 0.0259 60.9323;
+
+    --accent: 0.8361 0.0713 90.3269;
+    --accent-foreground: 0.4265 0.0310 59.2153;
+
+    --destructive: 0.7136 0.0981 29.9827;
+    --destructive-foreground: 0.9790 0.0082 91.4818;
+
+    --border: 0.6918 0.0440 59.8448;
+    --input: 0.8361 0.0713 90.3269;
+
+    --ring: 0.7350 0.0564 130.8494;
+    --chart-1: 0.7350 0.0564 130.8494;
+    --chart-2: 0.6762 0.0567 132.4479;
+    --chart-3: 0.8185 0.0332 136.6539;
+    --chart-4: 0.5929 0.0464 137.6224;
+    --chart-5: 0.5183 0.0390 137.1892;
+
+    --sidebar: 0.8631 0.0645 90.5161;
+    --sidebar-foreground: 0.4265 0.0310 59.2153;
+    --sidebar-primary: 0.7350 0.0564 130.8494;
+    --sidebar-primary-foreground: 0.9882 0.0069 88.6415;
+    --sidebar-accent: 0.9225 0.0169 88.0027;
+    --sidebar-accent-foreground: 0.4265 0.0310 59.2153;
+    --sidebar-border: 0.9073 0.0170 88.0044;
+    --sidebar-ring: 0.7350 0.0564 130.8494;
+    
+    --font-sans: Merriweather, serif;
+    --font-serif: Source Serif 4, serif;
+    --font-mono: JetBrains Mono, monospace;
+    --radius: 0.425rem;
+  }
+
+  [data-theme="sunset-horizon"] {
+    --background: 0.9856 0.0084 56.3169;
+    --foreground: 0.3353 0.0132 2.7676;
+
+    --card: 1.0000 0 0;
+    --card-foreground: 0.3353 0.0132 2.7676;
 
     --popover: 1.0000 0 0;
-    --popover-foreground: 0.2012 0.0453 278.3434;
+    --popover-foreground: 0.3353 0.0132 2.7676;
 
-    --primary: 0 0 0;
-    --primary-foreground: 0.9843 0.0039 264.5419;
+    --primary: 0.7357 0.1641 34.7091;
+    --primary-foreground: 1.0000 0 0;
 
-    --secondary: 0.9608 0.0192 264.5313;
-    --secondary-foreground: 0.2695 0.0515 278.0403;
+    --secondary: 0.9596 0.0200 28.9029;
+    --secondary-foreground: 0.5587 0.1294 32.7364;
 
-    --muted: 0.986 0 0;
-    --muted-foreground: 1 0 0;
+    --muted: 0.9656 0.0176 39.4009;
+    --muted-foreground: 0.5534 0.0116 58.0708;
 
-    --text: 0.52 0 0;
-    --black-color: 0 0 0;
-    --white-color: 1 0 0;
-    --gray-color: 0.54 0 0;
-    --footer: 0.18 0 0;
+    --accent: 0.8278 0.1131 57.9984;
+    --accent-foreground: 0.3353 0.0132 2.7676;
 
-    --accent: 0.96 0 0;
-    --accent-foreground: 0 0 0;
+    --destructive: 0.6122 0.2082 22.2410;
+    --destructive-foreground: 1.0000 0 0;
 
-    --destructive: 0.6279 0.2577 29.2339;
-    --destructive-foreground: 0.9843 0.0039 264.5419;
+    --border: 0.9296 0.0370 38.6868;
+    --input: 0.9296 0.0370 38.6868;
 
-    --border: 0.8549 0.0136 258.3382;
-    --input: 0.9176 0.0167 258.8462;
-    --ring: 0.2012 0.0453 278.3434;
+    --ring: 0.7357 0.1641 34.7091;
 
-    --radius: 0.2rem;
+    --chart-1: 0.7357 0.1641 34.7091;
+    --chart-2: 0.8278 0.1131 57.9984;
+    --chart-3: 0.8773 0.0763 54.9314;
+    --chart-4: 0.8200 0.1054 40.8859;
+    --chart-5: 0.6368 0.1306 32.0721;
 
-    --success: 0.7686 0.1686 208.1613;
-    --warning: 0.9138 0.1285 86.0588;
-    --error: 0.8824 0.1961 27.3251;
+    --sidebar: 0.9656 0.0176 39.4009;
+    --sidebar-foreground: 0.3353 0.0132 2.7676;
+    --sidebar-primary: 0.7357 0.1641 34.7091;
+    --sidebar-primary-foreground: 1.0000 0 0;
+    --sidebar-accent: 0.8278 0.1131 57.9984;
+    --sidebar-accent-foreground: 0.3353 0.0132 2.7676;
+    --sidebar-border: 0.9296 0.0370 38.6868;
+    --sidebar-ring: 0.7357 0.1641 34.7091;
+
+    --font-sans: Montserrat, sans-serif;
+    --font-serif: Merriweather, serif;
+    --font-mono: Ubuntu Mono, monospace;
+
+    --radius: 0.625rem;
+  }
+
+  [data-theme="bubblegum"] {
+    --background: 0.9399 0.0203 345.6985;
+    --foreground: 0.4712 0 0;
+
+    --card: 0.9498 0.0500 86.8891;
+    --card-foreground: 0.4712 0 0;
+
+    --popover: 1.0000 0 0;
+    --popover-foreground: 0.4712 0 0;
+
+    --primary: 0.6209 0.1801 348.1385;
+    --primary-foreground: 1.0000 0 0;
+
+    --secondary: 0.8095 0.0694 198.1863;
+    --secondary-foreground: 0.3211 0 0;
+
+    --muted: 0.8800 0.0504 212.0952;
+    --muted-foreground: 0.5795 0 0;
+
+    --accent: 0.9195 0.0801 87.6670;
+    --accent-foreground: 0.3211 0 0;
+
+    --destructive: 0.7091 0.1697 21.9551;
+    --destructive-foreground: 1.0000 0 0;
+
+    --border: 0.6209 0.1801 348.1385;
+    --input: 0.9189 0 0;
+
+    --ring: 0.7002 0.1597 350.7532;
+
+    --chart-1: 0.7002 0.1597 350.7532;
+    --chart-2: 0.8189 0.0799 212.0892;
+    --chart-3: 0.9195 0.0801 87.6670;
+    --chart-4: 0.7998 0.1110 348.1791;
+    --chart-5: 0.6197 0.1899 353.9091;
+
+    --sidebar: 0.9140 0.0424 343.0913;
+    --sidebar-foreground: 0.3211 0 0;
+    --sidebar-primary: 0.6559 0.2118 354.3084;
+    --sidebar-primary-foreground: 1.0000 0 0;
+    --sidebar-accent: 0.8228 0.1095 346.0184;
+    --sidebar-accent-foreground: 0.3211 0 0;
+    --sidebar-border: 0.9464 0.0327 307.1745;
+    --sidebar-ring: 0.6559 0.2118 354.3084;
+
+    --font-sans: Poppins, sans-serif;
+    --font-serif: Lora, serif;
+    --font-mono: Fira Code, monospace;
+    --radius: 0.4rem;
+  }
+
+  [data-theme="sage-garden"] {
+    --background: 0.9761 0.0041 91.4461;
+    --foreground: 0.2417 0.0298 269.8827;
+
+    --card: 1 0 0;
+    --card-foreground: 0.2417 0.0298 269.8827;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.2417 0.0298 269.8827;
+
+    --primary: 0.6333 0.0309 154.9039;
+    --primary-foreground: 1 0 0;
+
+    --secondary: 0.8596 0.0291 119.9919;
+    --secondary-foreground: 0.2417 0.0298 269.8827;
+
+    --muted: 0.9251 0.0071 88.6450;
+    --muted-foreground: 0.5510 0.0234 264.3637;
+
+    --accent: 0.8242 0.0221 136.6092;
+    --accent-foreground: 0.2417 0.0298 269.8827;
+
+    --destructive: 0.5624 0.1743 26.1433;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.9251 0.0071 88.6450;
+    --input: 1 0 0;
+
+    --ring: 0.6333 0.0309 154.9039;
+
+    --chart-1: 0.6333 0.0309 154.9039;
+    --chart-2: 0.7209 0.0489 120.9474;
+    --chart-3: 0.6744 0.0427 136.0110;
+    --chart-4: 0.5510 0.0234 264.3637;
+    --chart-5: 0.9251 0.0071 88.6450;
+
+    --sidebar: 0.9845 0.0026 106.4477;
+    --sidebar-foreground: 0.2417 0.0298 269.8827;
+    --sidebar-primary: 0.6333 0.0309 154.9039;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.9251 0.0071 88.6450;
+    --sidebar-accent-foreground: 0.2417 0.0298 269.8827;
+    --sidebar-border: 0.9251 0.0071 88.6450;
+    --sidebar-ring: 0.6333 0.0309 154.9039;
+
+    --font-sans: Antic, ui-sans-serif, sans-serif, system-ui;
+    --font-serif: Signifier, Georgia, serif;
+    --font-mono: JetBrains Mono, Courier New, monospace;
+
+    --radius: 0.35rem;
   }
 }
 
@@ -65,6 +266,10 @@
   }
 }
 
-html[data-theme='light'] {
+html[data-theme='default'],
+html[data-theme='kodama-grove'],
+html[data-theme="sunset-horizon"],
+html[data-theme="bubblegum"],
+html[data-theme="sage-garden"] {
   opacity: initial;
 }

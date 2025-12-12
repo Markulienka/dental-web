@@ -52,8 +52,8 @@ const Contact5 = () => {
                 </div>
                 <div>
                   <h3 className="mb-1 font-semibold">Email</h3>
-                  <p className="text-sm text-blackColor">info@dentalweb.sk</p>
-                  <p className="text-sm text-blackColor">podpora@dentalweb.sk</p>
+                  <p className="text-sm text-primary">info@dentalweb.sk</p>
+                  <p className="text-sm text-primary">podpora@dentalweb.sk</p>
                 </div>
               </div>
 
@@ -63,8 +63,8 @@ const Contact5 = () => {
                 </div>
                 <div>
                   <h3 className="mb-1 font-semibold">Telefón</h3>
-                  <p className="text-sm text-blackColor">+421 123 456 789</p>
-                  <p className="text-sm text-blackColor">Pondelok - Piatok: 9:00 - 17:00</p>
+                  <p className="text-sm text-primary">+421 123 456 789</p>
+                  <p className="text-sm text-primary">Pondelok - Piatok: 9:00 - 17:00</p>
                 </div>
               </div>
 
@@ -74,8 +74,8 @@ const Contact5 = () => {
                 </div>
                 <div>
                   <h3 className="mb-1 font-semibold">Adresa</h3>
-                  <p className="text-sm text-blackColor">Hlavná 123</p>
-                  <p className="text-sm text-blackColor">010 01 Žilina</p>
+                  <p className="text-sm text-primary">Hlavná 123</p>
+                  <p className="text-sm text-primary">010 01 Žilina</p>
                 </div>
               </div>
 
@@ -85,9 +85,9 @@ const Contact5 = () => {
                 </div>
                 <div>
                   <h3 className="mb-1 font-semibold">Pracovné hodiny</h3>
-                  <p className="text-sm text-blackColor">Pondelok - Piatok: 9:00 - 17:00</p>
-                  <p className="text-sm text-blackColor">Sobota - Nedeľa:</p>
-                  <p className="text-sm text-blackColor">Zatvorené</p>
+                  <p className="text-sm text-primary">Pondelok - Piatok: 9:00 - 17:00</p>
+                  <p className="text-sm text-primary">Sobota - Nedeľa:</p>
+                  <p className="text-sm text-primary">Zatvorené</p>
                 </div>
               </div>
             </div>

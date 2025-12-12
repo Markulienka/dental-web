@@ -4,8 +4,6 @@ import type { ThemeName } from '@/providers/Theme/types'
 
 import React, { createContext, useCallback, use, useState, useEffect } from 'react'
 
-import canUseDOM from '@/utilities/canUseDOM'
-
 export interface ContextType {
   headerTheme?: ThemeName | null
   setHeaderTheme: (theme: ThemeName | null) => void
@@ -19,16 +17,15 @@ const initialContext: ContextType = {
 const HeaderThemeContext = createContext(initialContext)
 
 export const HeaderThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [headerTheme, setThemeState] = useState<ThemeName | undefined | null>(
-    canUseDOM ? (document.documentElement.getAttribute('data-theme') as ThemeName) : undefined,
-  )
+  const [headerTheme, setThemeState] = useState<ThemeName | undefined | null>(undefined)
 
   const setHeaderTheme = useCallback((themeToSet: ThemeName | null) => {
     setThemeState(themeToSet)
   }, [])
 
   useEffect(() => {
-    if (!canUseDOM) return
+    const initialTheme = document.documentElement.getAttribute('data-theme') as ThemeName
+    setThemeState(initialTheme)
 
     const observer = new MutationObserver(() => {
       const currentTheme = document.documentElement.getAttribute('data-theme') as ThemeName

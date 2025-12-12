@@ -30,7 +30,7 @@ export type Feature20Props = {
 };
 
 const ClinicCard: React.FC<ClinicItem> = ({ image, clinicName, location, tags, link }) => (
-  <Card className="overflow-hidden bg-white shadow-sm max-w-md mx-auto">
+  <Card className="overflow-hidden bg-background shadow-sm max-w-md mx-auto">
     {/* Full-width image at the top */}
     <div className="h-48 w-full overflow-hidden">
       <Media
@@ -40,7 +40,7 @@ const ClinicCard: React.FC<ClinicItem> = ({ image, clinicName, location, tags, l
     </div>
 
     {/* Content section below */}
-    <div className="bg-white p-6">
+    <div className="bg-background p-6">
       <p className="mb-2 text-xl text-foreground/100">{clinicName}</p>
 
       <div className="mb-4 flex items-center gap-2 text-foreground">

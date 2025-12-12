@@ -111,7 +111,7 @@ const MobilePricingSelector = ({
               return (
                 <div key={featureIndex} className="flex justify-between items-center py-2 border-b">
                   <span className="text-sm font-medium">{feature.name}</span>
-                  <span className="text-sm text-gray-400">-</span>
+                  <span className="text-sm text-secondary-400">-</span>
                 </div>
               )
             }
@@ -124,7 +124,7 @@ const MobilePricingSelector = ({
                     featureValue.booleanValue ? (
                       <Check className="h-5 w-5 text-green-600" />
                     ) : (
-                      <span className="text-gray-400 text-lg">×</span>
+                      <span className="text-secondary-400 text-lg">×</span>
                     )
                   ) : (
                     <span className="font-medium">{featureValue.textValue || '-'}</span>

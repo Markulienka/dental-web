@@ -1,4 +1,10 @@
-export type ThemeName = 'default' | 'kodama-grove' | 'sunset-horizon' | 'bubblegum' | 'sage-garden'
+export type ThemeName =
+  | 'default'
+  | 'kodama-grove'
+  | 'sunset-horizon'
+  | 'bubblegum'
+  | 'sage-garden'
+  | 'vintage-paper'
 
 export interface Theme {
   name: ThemeName

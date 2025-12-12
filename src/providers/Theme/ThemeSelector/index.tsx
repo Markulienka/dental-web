@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 export const ThemeSelector: React.FC = () => {
   const { theme, setTheme } = useTheme()
 
-  const themes: ThemeName[] = ['default', 'kodama-grove', 'sunset-horizon', 'bubblegum', 'sage-garden']
+  const themes: ThemeName[] = ['default', 'kodama-grove', 'sunset-horizon', 'bubblegum', 'sage-garden', 'vintage-paper']
 
   const handlePrevTheme = () => {
     const currentIndex = themes.indexOf(theme)

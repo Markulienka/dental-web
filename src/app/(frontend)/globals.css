@@ -42,13 +42,33 @@
       --input: 0.9176 0.0167 258.8462;
       --ring: 0.2012 0.0453 278.3434;
 
+      --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      --font-serif: var(--font-lora), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
       --radius: 0.2rem;
+      --spacing-unit: 0.25rem;
 
       --success: 0.7686 0.1686 208.1613;   
       --warning: 0.9138 0.1285 86.0588;   
       --error: 0.8824 0.1961 27.3251;     
 
       --footer-bg: 0.18 0 0;                        
+
+      --shadow-x: 0;
+      --shadow-y: 1px;
+      --shadow-blur: 3px;
+      --shadow-spread: 0px;
+      --shadow-opacity: 0.1;
+      --shadow-color: oklch(0 0 0);
+      --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+      --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+      --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+      --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+      --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 2px 4px -1px hsl(0 0% 0% / 0.10);
+      --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);
+      --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);
+      --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
   }
 
   [data-theme="kodama-grove"] {
@@ -95,10 +115,27 @@
     --sidebar-border: 0.9073 0.0170 88.0044;
     --sidebar-ring: 0.7350 0.0564 130.8494;
     
-    --font-sans: Merriweather, serif;
-    --font-serif: Source Serif 4, serif;
-    --font-mono: JetBrains Mono, monospace;
+    --font-sans: var(--font-merriweather), serif;
+    --font-serif: var(--font-source-serif-4), serif;
+    --font-mono: var(--font-jetbrains-mono), monospace;
+
     --radius: 0.425rem;
+    --spacing-unit: 0.25rem;
+
+    --shadow-x: 3px;
+    --shadow-y: 3px;
+    --shadow-blur: 2px;
+    --shadow-spread: 0px;
+    --shadow-opacity: 0.15;
+    --shadow-color: hsl(88 22% 35% / 0.15);
+    --shadow-2xs: 3px 3px 2px 0px hsl(88 22% 35% / 0.07);
+    --shadow-xs: 3px 3px 2px 0px hsl(88 22% 35% / 0.07);
+    --shadow-sm: 3px 3px 2px 0px hsl(88 22% 35% / 0.15), 3px 1px 2px -1px hsl(88 22% 35% / 0.15);
+    --shadow: 3px 3px 2px 0px hsl(88 22% 35% / 0.15), 3px 1px 2px -1px hsl(88 22% 35% / 0.15);
+    --shadow-md: 3px 3px 2px 0px hsl(88 22% 35% / 0.15), 3px 2px 4px -1px hsl(88 22% 35% / 0.15);
+    --shadow-lg: 3px 3px 2px 0px hsl(88 22% 35% / 0.15), 3px 4px 6px -1px hsl(88 22% 35% / 0.15);
+    --shadow-xl: 3px 3px 2px 0px hsl(88 22% 35% / 0.15), 3px 8px 10px -1px hsl(88 22% 35% / 0.15);
+    --shadow-2xl: 3px 3px 2px 0px hsl(88 22% 35% / 0.38);
   }
 
   [data-theme="sunset-horizon"] {
@@ -146,11 +183,27 @@
     --sidebar-border: 0.9296 0.0370 38.6868;
     --sidebar-ring: 0.7357 0.1641 34.7091;
 
-    --font-sans: Montserrat, sans-serif;
-    --font-serif: Merriweather, serif;
-    --font-mono: Ubuntu Mono, monospace;
+    --font-sans: var(--font-montserrat), sans-serif;
+    --font-serif: var(--font-merriweather), serif;
+    --font-mono: var(--font-ubuntu-mono), monospace;
 
     --radius: 0.625rem;
+    --spacing-unit: 0.25rem;
+
+    --shadow-x: 0px;
+    --shadow-y: 6px;
+    --shadow-blur: 12px;
+    --shadow-spread: -3px;
+    --shadow-opacity: 0.09;
+    --shadow-color: hsl(0 0% 0%);
+    --shadow-2xs: 0px 6px 12px -3px hsl(0 0% 0% / 0.04);
+    --shadow-xs: 0px 6px 12px -3px hsl(0 0% 0% / 0.04);
+    --shadow-sm: 0px 6px 12px -3px hsl(0 0% 0% / 0.09), 0px 1px 2px -4px hsl(0 0% 0% / 0.09);
+    --shadow: 0px 6px 12px -3px hsl(0 0% 0% / 0.09), 0px 1px 2px -4px hsl(0 0% 0% / 0.09);
+    --shadow-md: 0px 6px 12px -3px hsl(0 0% 0% / 0.09), 0px 2px 4px -4px hsl(0 0% 0% / 0.09);
+    --shadow-lg: 0px 6px 12px -3px hsl(0 0% 0% / 0.09), 0px 4px 6px -4px hsl(0 0% 0% / 0.09);
+    --shadow-xl: 0px 6px 12px -3px hsl(0 0% 0% / 0.09), 0px 8px 10px -4px hsl(0 0% 0% / 0.09);
+    --shadow-2xl: 0px 6px 12px -3px hsl(0 0% 0% / 0.22);
   }
 
   [data-theme="bubblegum"] {
@@ -198,10 +251,27 @@
     --sidebar-border: 0.9464 0.0327 307.1745;
     --sidebar-ring: 0.6559 0.2118 354.3084;
 
-    --font-sans: Poppins, sans-serif;
-    --font-serif: Lora, serif;
-    --font-mono: Fira Code, monospace;
+    --font-sans: var(--font-poppins), sans-serif;
+    --font-serif: var(--font-lora), serif;
+    --font-mono: var(--font-fira-code), monospace;
+
     --radius: 0.4rem;
+    --spacing-unit: 0.25rem;
+
+    --shadow-x: 3px;
+    --shadow-y: 3px;
+    --shadow-blur: 0px;
+    --shadow-spread: 0px;
+    --shadow-opacity: 1.0;
+    --shadow-color: hsl(325.78 58.18% 56.86% / 0.5);
+    --shadow-2xs: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 0.50);
+    --shadow-xs: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 0.50);
+    --shadow-sm: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 1.00), 3px 1px 2px -1px hsl(325.7800 58.1800% 56.8600% / 1.00);
+    --shadow: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 1.00), 3px 1px 2px -1px hsl(325.7800 58.1800% 56.8600% / 1.00);
+    --shadow-md: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 1.00), 3px 2px 4px -1px hsl(325.7800 58.1800% 56.8600% / 1.00);
+    --shadow-lg: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 1.00), 3px 4px 6px -1px hsl(325.7800 58.1800% 56.8600% / 1.00);
+    --shadow-xl: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 1.00), 3px 8px 10px -1px hsl(325.7800 58.1800% 56.8600% / 1.00);
+    --shadow-2xl: 3px 3px 0px 0px hsl(325.7800 58.1800% 56.8600% / 2.50);
   }
 
   [data-theme="sage-garden"] {
@@ -249,11 +319,95 @@
     --sidebar-border: 0.9251 0.0071 88.6450;
     --sidebar-ring: 0.6333 0.0309 154.9039;
 
-    --font-sans: Antic, ui-sans-serif, sans-serif, system-ui;
-    --font-serif: Signifier, Georgia, serif;
-    --font-mono: JetBrains Mono, Courier New, monospace;
+    --font-sans: var(--font-antic), ui-sans-serif, sans-serif, system-ui;
+    --font-serif: var(--font-signifier, Georgia), serif;
+    --font-mono: var(--font-jetbrains-mono), monospace;
 
     --radius: 0.35rem;
+    --spacing-unit: 0.23rem;
+
+    --shadow-x: 0px;
+    --shadow-y: 1px;
+    --shadow-blur: 2px;
+    --shadow-spread: 0px;
+    --shadow-opacity: 0.04;
+    --shadow-color: #1a1f2e;
+    --shadow-2xs: 0px 1px 2px 0px hsl(225 27.7778% 14.1176% / 0.02);
+    --shadow-xs: 0px 1px 2px 0px hsl(225 27.7778% 14.1176% / 0.02);
+    --shadow-sm: 0px 1px 2px 0px hsl(225 27.7778% 14.1176% / 0.04), 0px 1px 2px -1px hsl(225 27.7778% 14.1176% / 0.04);
+    --shadow: 0px 1px 2px 0px hsl(225 27.7778% 14.1176% / 0.04), 0px 1px 2px -1px hsl(225 27.7778% 14.1176% / 0.04);
+    --shadow-md: 0px 1px 2px 0px hsl(225 27.7778% 14.1176% / 0.04), 0px 2px 4px -1px hsl(225 27.7778% 14.1176% / 0.04);
+    --shadow-lg: 0px 1px 2px 0px hsl(225 27.7778% 14.1176% / 0.04), 0px 4px 6px -1px hsl(225 27.7778% 14.1176% / 0.04);
+    --shadow-xl: 0px 1px 2px 0px hsl(225 27.7778% 14.1176% / 0.04), 0px 8px 10px -1px hsl(225 27.7778% 14.1176% / 0.04);
+    --shadow-2xl: 0px 1px 2px 0px hsl(225 27.7778% 14.1176% / 0.10);
+  }
+
+  [data-theme="vintage-paper"] {
+    --background: 0.9582 0.0152 90.2357;
+    --foreground: 0.3760 0.0225 64.3434;
+
+    --card: 0.9914 0.0098 87.4695;
+    --card-foreground: 0.3760 0.0225 64.3434;
+
+    --popover: 0.9914 0.0098 87.4695;
+    --popover-foreground: 0.3760 0.0225 64.3434;
+
+    --primary: 0.6180 0.0778 65.5444;
+    --primary-foreground: 1.0000 0 0;
+
+    --secondary: 0.8846 0.0302 85.5655;
+    --secondary-foreground: 0.4313 0.0300 64.9288;
+
+    --muted: 0.9239 0.0190 83.0636;
+    --muted-foreground: 0.5391 0.0387 71.1655;
+
+    --accent: 0.8348 0.0426 88.8064;
+    --accent-foreground: 0.3760 0.0225 64.3434;
+
+    --destructive: 0.5471 0.1438 32.9149;
+    --destructive-foreground: 1.0000 0 0;
+
+    --border: 0.8606 0.0321 84.5881;
+    --input: 0.8606 0.0321 84.5881;
+    --ring: 0.6180 0.0778 65.5444;
+
+    --chart-1: 0.6180 0.0778 65.5444;
+    --chart-2: 0.5604 0.0624 68.5805;
+    --chart-3: 0.4851 0.0570 72.6827;
+    --chart-4: 0.6777 0.0624 64.7755;
+    --chart-5: 0.7264 0.0581 66.6967;
+
+    --sidebar: 0.9239 0.0190 83.0636;
+    --sidebar-foreground: 0.3760 0.0225 64.3434;
+    --sidebar-primary: 0.6180 0.0778 65.5444;
+    --sidebar-primary-foreground: 1.0000 0 0;
+    --sidebar-accent: 0.8348 0.0426 88.8064;
+    --sidebar-accent-foreground: 0.3760 0.0225 64.3434;
+    --sidebar-border: 0.8606 0.0321 84.5881;
+    --sidebar-ring: 0.6180 0.0778 65.5444;
+    
+    --font-sans: var(--font-libre-baskerville), serif;
+    --font-serif: var(--font-lora), serif;
+    --font-mono: var(--font-ibm-plex-mono), monospace;
+    
+    --radius: 0.25rem;
+    --spacing: 0.25rem;
+
+    --shadow-x: 2px;
+    --shadow-y: 3px;
+    --shadow-blur: 5px;
+    --shadow-spread: 0px;
+    --shadow-opacity: 0.12;
+    --shadow-color: hsl(28 13% 20%);
+    --shadow-2xs: 2px 3px 5px 0px hsl(28 13% 20% / 0.06);
+    --shadow-xs: 2px 3px 5px 0px hsl(28 13% 20% / 0.06);
+    --shadow-sm: 2px 3px 5px 0px hsl(28 13% 20% / 0.12), 2px 1px 2px -1px hsl(28 13% 20% / 0.12);
+    --shadow: 2px 3px 5px 0px hsl(28 13% 20% / 0.12), 2px 1px 2px -1px hsl(28 13% 20% / 0.12);
+    --shadow-md: 2px 3px 5px 0px hsl(28 13% 20% / 0.12), 2px 2px 4px -1px hsl(28 13% 20% / 0.12);
+    --shadow-lg: 2px 3px 5px 0px hsl(28 13% 20% / 0.12), 2px 4px 6px -1px hsl(28 13% 20% / 0.12);
+    --shadow-xl: 2px 3px 5px 0px hsl(28 13% 20% / 0.12), 2px 8px 10px -1px hsl(28 13% 20% / 0.12);
+    --shadow-2xl: 2px 3px 5px 0px hsl(28 13% 20% / 0.30);
+
   }
 }
 
@@ -270,6 +424,7 @@ html[data-theme='default'],
 html[data-theme='kodama-grove'],
 html[data-theme="sunset-horizon"],
 html[data-theme="bubblegum"],
-html[data-theme="sage-garden"] {
+html[data-theme="sage-garden"],
+html[data-theme="vintage-paper"] {
   opacity: initial;
 }

@@ -1,10 +1,12 @@
 export type ThemeName =
   | 'default'
   | 'kodama-grove'
-  | 'sunset-horizon'
   | 'bubblegum'
   | 'sage-garden'
-  | 'vintage-paper'
+  | 'doom-64-custom'
+  | 'neo-brutalism-custom'
+  | 'notebook'
+  | 'retro-arcade-custom'
 
 export interface Theme {
   name: ThemeName

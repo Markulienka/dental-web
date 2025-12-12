@@ -5,6 +5,9 @@ import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
 import React from 'react'
 import {
+  Englebert,
+  Amiri,
+  Azeret_Mono as AzeretMono,
   Antic,
   Fira_Code as FiraCode,
   IBM_Plex_Mono as IBMPlexMono,
@@ -16,6 +19,11 @@ import {
   Poppins,
   Source_Serif_4 as SourceSerif4,
   Ubuntu_Mono as UbuntuMono,
+  Oxanium,
+  Abhaya_Libre,
+  Source_Code_Pro,
+  Architects_Daughter,
+  Lexend_Zetta
 } from 'next/font/google'
 
 import { Footer } from '@/Footer/Component'
@@ -38,6 +46,14 @@ const FiraCodeFont = FiraCode({ subsets: ['latin'], weight: ['400', '500', '600'
 const AnticFont = Antic({ subsets: ['latin'], weight: ['400'], variable: '--font-antic' })
 const LibreBaskervilleFont = LibreBaskerville({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-libre-baskerville' })
 const IBMPlexMonoFont = IBMPlexMono({ subsets: ['latin'], weight: ['400', '500', '700'], variable: '--font-ibm-plex-mono' })
+const SourceCodeProFont = Source_Code_Pro({ subsets: ['latin'], weight: ['400', '600', '700'], variable: '--font-source-code-pro' })
+const OxaniumFont = Oxanium({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-oxanium' })
+const AbhayaLibreFont = Abhaya_Libre({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-abhaya-libre' })
+const EnglebertFont = Englebert({ subsets: ['latin'], weight: ['400'], variable: '--font-englebert' })
+const AmiriFont = Amiri({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-amiri' })
+const AzeretMonoFont = AzeretMono({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-azeret-mono' })
+const ArchitectsDaughterFont = Architects_Daughter({ subsets: ['latin'], weight: ['400'], variable: '--font-architects-daughter' })
+const LexendZettaFont = Lexend_Zetta({ subsets: ['latin'], weight: ['400'], variable: '--font-lexend-zetta' })
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -56,6 +72,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         AnticFont.variable,
         LibreBaskervilleFont.variable,
         IBMPlexMonoFont.variable,
+        SourceCodeProFont.variable,
+        OxaniumFont.variable,
+        AbhayaLibreFont.variable,
+        EnglebertFont.variable,
+        AmiriFont.variable,
+        AzeretMonoFont.variable,
+        ArchitectsDaughterFont.variable,
+        LexendZettaFont.variable
       )}
       lang="en"
       suppressHydrationWarning

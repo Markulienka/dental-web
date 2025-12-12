@@ -11,7 +11,16 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   useEffect(() => {
     const savedTheme = window.localStorage.getItem(themeLocalStorageKey) as ThemeName | null
 
-    if (savedTheme && ['default', 'kodama-grove', 'sunset-horizon', 'bubblegum', 'sage-garden', 'vintage-paper'].includes(savedTheme)) {
+    if (savedTheme && [
+      'default',
+      'kodama-grove',
+      'bubblegum',
+      'sage-garden',
+      'doom-64-custom',
+      'neo-brutalism-custom',
+      'notebook',
+      'retro-arcade-custom'
+    ].includes(savedTheme)) {
       setThemeState(savedTheme)
     }
   }, [])

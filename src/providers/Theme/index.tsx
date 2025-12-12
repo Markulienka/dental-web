@@ -19,7 +19,6 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       'doom-64-custom',
       'neo-brutalism-custom',
       'notebook',
-      'retro-arcade-custom'
     ].includes(savedTheme)) {
       setThemeState(savedTheme)
     }

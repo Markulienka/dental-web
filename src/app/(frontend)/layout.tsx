@@ -53,7 +53,6 @@ const EnglebertFont = Englebert({ subsets: ['latin'], weight: ['400'], variable:
 const AmiriFont = Amiri({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-amiri' })
 const AzeretMonoFont = AzeretMono({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-azeret-mono' })
 const ArchitectsDaughterFont = Architects_Daughter({ subsets: ['latin'], weight: ['400'], variable: '--font-architects-daughter' })
-const MonsieurLaDoulaiseFont = Monsieur_La_Doulaise({ subsets: ['latin'], weight: ['400'], variable: '--font-monsieur-la-doulaise' })
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -79,7 +78,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         AmiriFont.variable,
         AzeretMonoFont.variable,
         ArchitectsDaughterFont.variable,
-        MonsieurLaDoulaiseFont.variable,
       )}
       lang="en"
       suppressHydrationWarning

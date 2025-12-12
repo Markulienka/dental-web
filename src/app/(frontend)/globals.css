@@ -473,73 +473,6 @@
     --shadow-xl: 1px 4px 5px 0px hsl(0 0% 0% / 0.03), 1px 8px 10px -1px hsl(0 0% 0% / 0.03);
     --shadow-2xl: 1px 4px 5px 0px hsl(0 0% 0% / 0.07);
   }
-
-  [data-theme='retro-arcade-custom'] {
-    --background: 0.9401 0.0897 137.3041;
-    --foreground: 0.1912 0.0970 281.6810;
-    
-    --card: 0.8855 0.0642 138.0882;
-    --card-foreground: 0.1912 0.0970 281.6810;
-    
-    --popover: 0.8855 0.0642 138.0882;
-    --popover-foreground: 0.1912 0.0970 281.6810;
-    
-    --primary: 0.6539 0.1312 62.5384;
-    --primary-foreground: 1.0000 0 0;
-    
-    --secondary: 0.3715 0.1629 271.9974;
-    --secondary-foreground: 1.0000 0 0;
-    
-    --muted: 0.6254 0.0238 285.6901;
-    --muted-foreground: 0.1912 0.0970 281.6810;
-    
-    --accent: 0.7303 0.1825 126.4858;
-    --accent-foreground: 1.0000 0 0;
-    
-    --destructive: 0.8344 0.1758 110.7433;
-    --destructive-foreground: 1.0000 0 0;
-    
-    --border: 0.5784 0.0320 289.7276;
-    --input: 0.5784 0.0320 289.7276;
-    --ring: 0.6539 0.1312 62.5384;
-    
-    --chart-1: 0.4541 0.2206 294.1520;
-    --chart-2: 0.3715 0.1629 271.9974;
-    --chart-3: 0.6539 0.1312 62.5384;
-    --chart-4: 0.7303 0.1825 126.4858;
-    --chart-5: 0.8344 0.1758 110.7433;
-    
-    --sidebar: 0.9401 0.0897 137.3041;
-    --sidebar-foreground: 0.1912 0.0970 281.6810;
-    --sidebar-primary: 0.6539 0.1312 62.5384;
-    --sidebar-primary-foreground: 1.0000 0 0;
-    --sidebar-accent: 0.3715 0.1629 271.9974;
-    --sidebar-accent-foreground: 1.0000 0 0;
-    --sidebar-border: 0.5784 0.0320 289.7276;
-    --sidebar-ring: 0.6539 0.1312 62.5384;
-    
-    --font-sans: var(--font-monsieur-la-doulaise), ui-sans-serif, sans-serif, system-ui;
-    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    --font-mono: Space Mono, monospace;
-    
-    --radius: 0.7rem;
-    --spacing-unit: 0.4rem;
-
-    --shadow-x: 2px;
-    --shadow-y: 2px;
-    --shadow-blur: 4px;
-    --shadow-spread: 0px;
-    --shadow-opacity: 0.32;
-    --shadow-color: #10042f;
-    --shadow-2xs: 2px 2px 4px 0px hsl(256.7442 84.3137% 10% / 0.16);
-    --shadow-xs: 2px 2px 4px 0px hsl(256.7442 84.3137% 10% / 0.16);
-    --shadow-sm: 2px 2px 4px 0px hsl(256.7442 84.3137% 10% / 0.32), 2px 1px 2px -1px hsl(256.7442 84.3137% 10% / 0.32);
-    --shadow: 2px 2px 4px 0px hsl(256.7442 84.3137% 10% / 0.32), 2px 1px 2px -1px hsl(256.7442 84.3137% 10% / 0.32);
-    --shadow-md: 2px 2px 4px 0px hsl(256.7442 84.3137% 10% / 0.32), 2px 2px 4px -1px hsl(256.7442 84.3137% 10% / 0.32);
-    --shadow-lg: 2px 2px 4px 0px hsl(256.7442 84.3137% 10% / 0.32), 2px 4px 6px -1px hsl(256.7442 84.3137% 10% / 0.32);
-    --shadow-xl: 2px 2px 4px 0px hsl(256.7442 84.3137% 10% / 0.32), 2px 8px 10px -1px hsl(256.7442 84.3137% 10% / 0.32);
-    --shadow-2xl: 2px 2px 4px 0px hsl(256.7442 84.3137% 10% / 0.80);
-  }
 }
 
 @layer base {
@@ -557,7 +490,6 @@ html[data-theme="bubblegum"],
 html[data-theme="sage-garden"]
 html[data-theme='doom-64-custom'],
 html[data-theme='neo-brutalism-custom'],
-html[data-theme='notebook'],
-html[data-theme='retro-arcade-custom'] {
+html[data-theme='notebook'] {
   opacity: initial;
 }

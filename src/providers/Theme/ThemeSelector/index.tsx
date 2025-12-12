@@ -16,7 +16,6 @@ export const ThemeSelector: React.FC = () => {
     'doom-64-custom',
     'neo-brutalism-custom',
     'notebook',
-    'retro-arcade-custom'
   ]
 
   const handlePrevTheme = () => {
@@ -32,10 +31,10 @@ export const ThemeSelector: React.FC = () => {
   }
 
   return (
-    <div className="fixed top-1 right-4 z-50 flex gap-1">
+    <div className="fixed top-1 right-4 z-50 flex gap-1 transition-none">
       <Button
         onClick={handlePrevTheme}
-        className="w-[22px] h-[22px] flex items-center justify-center bg-background/80 backdrop-blur-sm border border-border hover:bg-accent transition-colors text-foreground text-sm font-medium rounded"
+        className="w-[22px] h-[22px] flex items-center justify-center bg-white border text-black text-sm transition-none"
         aria-label="Previous theme"
         title={`Previous theme (${themes.length} available)`}
       >
@@ -44,7 +43,7 @@ export const ThemeSelector: React.FC = () => {
 
       <Button
         onClick={handleNextTheme}
-        className="w-[22px] h-[22px] flex items-center justify-center bg-background/80 backdrop-blur-sm border border-border hover:bg-accent transition-colors text-foreground text-sm font-medium rounded"
+        className="w-[22px] h-[22px] flex items-center justify-center bg-white border text-black text-sm transition-none"
         aria-label="Next theme"
         title={`Next theme (${themes.length} available)`}
       >

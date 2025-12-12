@@ -6,7 +6,6 @@ export type ThemeName =
   | 'doom-64-custom'
   | 'neo-brutalism-custom'
   | 'notebook'
-  | 'retro-arcade-custom'
 
 export interface Theme {
   name: ThemeName

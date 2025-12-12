@@ -2,7 +2,7 @@
 
 import type { ThemeName } from '@/providers/Theme/types'
 
-import React, { createContext, useCallback, use, useState } from 'react'
+import React, { createContext, useCallback, use, useState, useEffect } from 'react'
 
 import canUseDOM from '@/utilities/canUseDOM'
 
@@ -25,6 +25,22 @@ export const HeaderThemeProvider = ({ children }: { children: React.ReactNode })
 
   const setHeaderTheme = useCallback((themeToSet: ThemeName | null) => {
     setThemeState(themeToSet)
+  }, [])
+
+  useEffect(() => {
+    if (!canUseDOM) return
+
+    const observer = new MutationObserver(() => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') as ThemeName
+      setThemeState(currentTheme)
+    })
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme'],
+    })
+
+    return () => observer.disconnect()
   }, [])
 
   return (

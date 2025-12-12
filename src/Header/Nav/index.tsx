@@ -12,7 +12,6 @@ import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false)
   const navItems = data?.navItems || []
-
   return (
     <>
       <Button

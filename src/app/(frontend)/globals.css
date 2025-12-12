@@ -518,12 +518,12 @@
     --sidebar-border: 0.5784 0.0320 289.7276;
     --sidebar-ring: 0.6539 0.1312 62.5384;
     
-    --font-sans: var(--font-lexend-zetta), ui-sans-serif, sans-serif, system-ui;
+    --font-sans: var(--font-monsieur-la-doulaise), ui-sans-serif, sans-serif, system-ui;
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: Space Mono, monospace;
     
-    --radius: 0.25rem;
-    --spacing-unit: 0.25rem;
+    --radius: 0.7rem;
+    --spacing-unit: 0.4rem;
 
     --shadow-x: 2px;
     --shadow-y: 2px;
